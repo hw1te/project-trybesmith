@@ -1,6 +1,6 @@
 import { OkPacket } from 'mysql2';
 import connection from './connection';
-import { Products } from '../interfaces';
+import { Products } from '../interfaces/products';
 
 const productsModel = {
   create: async (product: Products) => {
