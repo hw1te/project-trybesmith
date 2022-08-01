@@ -13,6 +13,12 @@ const productsModel = {
       
     return insertId;
   },
+
+  getAll: async () => {
+    const [allProductsList] = await connection.query('SELECT * FROM Trybesmith.Products');
+    
+    return allProductsList;
+  },
 };
 
 export default productsModel;

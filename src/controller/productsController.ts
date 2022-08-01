@@ -9,5 +9,10 @@ const productsController = {
     return res.status(code).json(data);
   },
 
+  getAll: async (req: Request, res: Response) => {
+    const { code, data } = await productsServices.getAll();
+    console.log(data);
+    return res.status(code).json(data);
+  },
 };
 export default productsController;
